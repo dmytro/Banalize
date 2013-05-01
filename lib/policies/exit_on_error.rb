@@ -34,10 +34,10 @@ EOF
     end
 
     
-    if ( code.dont_have?(/set\s+-e/) || 
-         code.dont_have?(/set\s+-o\s+errexit/)
-         ) &&
-        shebang.dont_have?(/\s-e/)
+    if ( code.dont_have?(/set\s+-e/) &&
+         code.dont_have?(/set\s+-o\s+errexit/) &&
+         shebang.dont_have?(/\s-e/)
+         )
       errors.add "Can not find option -e or -o errexit anywhere in the script"
     end
     return errors.empty?

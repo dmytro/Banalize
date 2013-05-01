@@ -47,9 +47,10 @@ EOF
     end
 
     
-    if ( code.dont_have?(/set\s+-u/) || 
-         code.dont_have?(/set\s+-o\s+nounset/)) &&
-        shebang.dont_have?(/\s-u/)
+    if ( code.dont_have?(/set\s+-u/) &&
+         code.dont_have?(/set\s+-o\s+nounset/) &&
+         shebang.dont_have?(/\s-u/)
+         )
       errors.add "Can not find option -u or -o nounset anywhere in the script"
     end
     return errors.empty?
