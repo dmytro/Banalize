@@ -1,4 +1,4 @@
-banalizer :should_use_set_nounset do
+banalizer  File.basename(__FILE__, '.rb').to_sym  do
 
   
   synopsis "Always use 'set -u' or 'set -o nounset' in scripts"

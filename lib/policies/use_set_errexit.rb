@@ -1,4 +1,4 @@
-banalizer :exit_on_error do
+banalizer  File.basename(__FILE__, '.rb').to_sym  do
 
   synopsis 'Script should be run with -e option or `set -o errexit`'
   
