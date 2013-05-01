@@ -1,3 +1,8 @@
+## v.0.0.6
+* Wed May 01 2013 -- Dmytro Kovalov
+
+  - bugfix. Fix logic in set -u/-e policies
+  
 ## v.0.0.5
 * Tue Apr 30 2013 -- Dmytro Kovalov
 
